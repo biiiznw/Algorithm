@@ -1,4 +1,4 @@
-package com.company;
+package com.company.sort;
 
 /**
  * select random value in Array
