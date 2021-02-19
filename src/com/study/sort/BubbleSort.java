@@ -1,4 +1,4 @@
-package com.company.sort;
+package com.study.sort;
 
 /**
  * bubble sort

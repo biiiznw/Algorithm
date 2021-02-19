@@ -1,4 +1,4 @@
-package com.company.structure;
+package com.study.structure;
 
 import java.util.LinkedList;
 

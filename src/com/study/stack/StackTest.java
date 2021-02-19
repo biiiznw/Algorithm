@@ -1,4 +1,4 @@
-package com.company.stack;
+package com.study.stack;
 
 import java.util.EmptyStackException;
 

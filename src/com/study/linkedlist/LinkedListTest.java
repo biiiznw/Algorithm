@@ -1,18 +1,12 @@
-package com.company.linkedlist;
+package com.study.linkedlist;
 
-/**
- * Unsorted list - Remove Duplicated Data In LinkedList
- * no buffer
- * space: O(1)
- * time: O(N2)
- */
-class RemoveDuplicatedDataInLinkedList {
+class LinkedList{
     Node header;
     static class Node{
         int data;
         Node next = null;
     }
-    RemoveDuplicatedDataInLinkedList(){
+    LinkedList(){
         header = new Node();
     }
     void append(int data){
@@ -43,35 +37,16 @@ class RemoveDuplicatedDataInLinkedList {
         }
         System.out.println(n.data);
     }
-
-    void removeDups(){
-        Node n = header;
-        while (n != null && n.next != null){
-            Node r = n;
-            while (r.next != null){
-                if(n.data == r.next.data){
-                    r.next = r.next.next;
-                }else{
-                    r = r.next;
-                }
-            }
-            n = n.next;
-        }
-    }
 }
-
-public class RemoveDuplicatedDataInLinkedListTest {
+public class LinkedListTest {
     public static void main(String[] args){
-        RemoveDuplicatedDataInLinkedList ll = new RemoveDuplicatedDataInLinkedList();
-        ll.append(2);
+        LinkedList ll = new LinkedList();
         ll.append(1);
         ll.append(2);
         ll.append(3);
         ll.append(4);
-        ll.append(4);
-        ll.append(2);
         ll.retrieve();
-        ll.removeDups();
+        ll.delete(1);
         ll.retrieve();
     }
 }

@@ -1,4 +1,4 @@
-package com.company.code;
+package com.coding;
 
 import java.util.Arrays;
 import java.util.HashMap;

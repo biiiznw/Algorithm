@@ -1,4 +1,4 @@
-package com.company.linkedlist;
+package com.study.linkedlist;
 
 /**
  * linked list

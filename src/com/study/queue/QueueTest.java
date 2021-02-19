@@ -1,4 +1,4 @@
-package com.company.queue;
+package com.study.queue;
 
 import java.util.NoSuchElementException;
 
