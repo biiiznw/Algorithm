@@ -10,14 +10,15 @@ package com.company.linkedlist;
  *
  */
 
+
 class Node{
-    int data;
-    Node next = null;
-    Node(int data){
+    private int data;
+    private Node next = null;
+    public Node(int data){
         this.data = data;
     }
 
-    void append(int data){
+    public void append(int data){
         Node end = new Node(data);
         Node n = this;
         while (n.next != null){
@@ -26,7 +27,7 @@ class Node{
         n.next = end;
     }
 
-    void delete(int data){
+    public void delete(int data){
         Node n = this;
         while (n.next != null){
             if(n.next.data == data){
@@ -36,7 +37,7 @@ class Node{
         }
     }
 
-    void retrieve(){
+    public void retrieve(){
         Node n = this;
         while (n.next != null){
             System.out.print(n.data + " -> ");
@@ -45,6 +46,8 @@ class Node{
         System.out.println(n.data);
     }
 }
+
+
 
 public class SinglyLinkedListTest {
     public static void main(String[] args){
