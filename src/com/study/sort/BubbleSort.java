@@ -4,6 +4,12 @@ package com.study.sort;
  * bubble sort
  * comparing two values and go to next
  *  O(n2)
+ *
+ * A bubble sort is used to arrange N elements in ascending order,
+ * and it is comparing two values and go to next from the first element.
+ * For example, if the first element is greater than the second element, then it swaps.
+ * Once the first n loop is done, then it will start the second n-1 loop.
+ * It is O of n square. O(n2)
  */
 public class BubbleSort {
     private static void bubbleSort(int[] arr){

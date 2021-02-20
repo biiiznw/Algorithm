@@ -2,6 +2,14 @@ package com.study.sort;
 
 /**
  * MergeSort
+ * 함수가 호출될때마다 절반씩 잘라서 재귀적으로 함수를 호출하고 맨 끝에 제일 작은 조각부터
+ * 2개씩 병합해서 정렬된 배열을 머지해 나가는 방식
+ * This algorithm is based on splitting a list, into two comparable sized lists.
+ * When the function is called, it divides N elements in half and recurs function.
+ * The method merges arranged elements by merging two pieces from the smallest piece in the last.
+ * left and right and then sorting each list and then merging the two sorted lists back together as one.
+ * It is O(n log n) that is always the same. But it needs to have extra storage space.
+ *
  * unsorted array
  * 4,2,6,3,7,8,5,1
  *  ㅁㅁㅁㅁㅁㅁㅁㅁ

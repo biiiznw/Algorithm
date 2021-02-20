@@ -45,6 +45,18 @@ package com.study.sort;
  *          /       \                           /
  *  QuickSort(0,1)  QuickSort(2,3)      QuickSort(7,8)
  *
+ * Quick sort
+ * Quicksort is the most optimized sort algorithm which performs sorting in O(n log n) comparisons.
+ * For example, after selecting a pivot value in the list,
+ * setting the start point from the first element.
+ * Startpoint ignores elements if the next element value is smaller than the pivot.
+ * Setting endpoint from the last element.
+ * Endpoint ignores elements if the next value is greater than the pivot.
+ * When start point and endpoint are intersecting,
+ * the left elements are smaller than pivot and right elements are bigger than pivot.
+ * Partitioning this two group of elements and recurring this function.
+ * If the pivot value is selected the smallest or biggest value every time,
+ * then complexity will be O of n square.
  */
 public class QuickSort {
     private static void quickSort(int[] arr){
