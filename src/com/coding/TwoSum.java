@@ -4,16 +4,16 @@ import java.util.Arrays;
 import java.util.HashMap;
 
 /**
- * Given an arry of integers, return indices of the two numbers
+ * Given an array of integers, return indices of the two numbers
  * such that they add up to a specific target
  */
 public class TwoSum {
     public static void main(String[] args){
         int[] nums = {6, 4, 3, 8, 7, 5, 2};
         TwoSumTest twoSum = new TwoSumTest();
-        int[] result = twoSum.test1(nums, 5);
-        System.out.println(Arrays.toString(result));
-        int[] result1 = twoSum.test2(nums, 5);
+//        int[] result = twoSum.test1(nums, 5);
+//        System.out.println(Arrays.toString(result));
+        int[] result1 = twoSum.test3(nums, 5);
         System.out.println(Arrays.toString(result1));
     }
 }
@@ -29,11 +29,23 @@ class TwoSumTest {
         }
         throw new IllegalArgumentException("No two sum solution");
     }
+
     public int[] test2(int[] nums, int target){
         HashMap<Integer, Integer> map = new HashMap<>();
         for(int i = 0; i < nums.length; i++) {
-            if(map.containsKey(target - nums[i])) return new int[]{map.get(target - nums[i]), i};
+            if(map.containsKey(target - nums[i]))
+                return new int[]{map.get(target - nums[i]), i};
             map.put(nums[i], i);
+        }
+        throw new IllegalArgumentException("No two sum solution");
+    }
+
+    public int[] test3(int[] nums, int target){
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for(int i = 0; i < nums.length; i++) {
+            if(map.containsKey(target - nums[i]))
+                return new int[]{target - nums[i], nums[i]};
+            map.put(nums[i], target - nums[i]);
         }
         throw new IllegalArgumentException("No two sum solution");
     }

@@ -1,0 +1,57 @@
+Explain what a Hashmap is, also some collision handling methods  
+Hashmap is working with key and value that can have a null.
+Hashmap is not synchronized.
+A Key must have a unique value, but a value can have a duplicated value.
+Time complexity is O(1), but the worst case is O(n),
+and it depends on distributing data in a hash table.
+
+insert, delete -> linked list
+search -> array
+
+	key
+	  |
+  hash method
+(hash function)
+ 	  |
+  hash code ————— bucket 0 (  entries )
+				      bucket 1 (  entries )
+				      bucket 2 (  entries )
+
+Getting key and putting it in hash method to get hash code.
+and a hash code uses as an index of bucket in hash table.
+
+Collision happens where a newly inserted key maps
+to an already occupied slot in the hash table is called collision.
+
+The collision happens when multiple keys hash to the same bucket.
+one way to avoid collision is making hash table size as a prime number.
+To resolve conflict, there are Open Address and Separate Chaining method.
+1. Open Addressing
+In this technique, if in case say two keys generate same hash,
+the first one would be stored at the hash position,
+and the other one(s) would be stored at next best position.
+Linear Probing - Simply look for the next empty space in the array.
+The worst case is point comes back to the starting point of searching,
+and searching is the end. Simply look for the next empty space in the array.
+The worst case is point comes back to the starting point of searching and searching end.
+Cache efficiency is good but there is data of clustering.
+Double hashing probing - one hash value as an index into the table and then
+repeatedly steps forward an interval until the desired value is located,
+an empty location is reached, or the entire table has been searched
+A popular second hash function is : hash2(key) = PRIME – (key % PRIME)
+where PRIME is a prime smaller than the TABLE_SIZE.
+2. Separate Chaining
+LinkedList - The idea is to make each cell of the hash table point to
+a linked list of records that have the same hash method value.
+3. Resize
+If the number of used buckets is more than 75%, resizing the number of buckets.
+
+what is hash table?
+HashTable is a collection of key-value pairs that distribute entries evenly across an array.
+The index to put an entry is decided by the hash function.
+If the data size is too big for the array, a collision may happen that two entries share the same hashcode/index.
+To keep both entries in the index, create a list(double linked list)
+for each index to store all entries with the same hashcode.
+Average search/delete/insert takes O(1) on average (usually, the linked lists are in constant size).
+Worst-case time complexity can be linear if all entries crowd into the same list,
+and it takes a linear search to find.

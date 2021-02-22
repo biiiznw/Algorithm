@@ -1,0 +1,29 @@
+Bubble Sort :
+A bubble sort is used to arrange N elements in ascending order,
+and it is comparing two values and go to next from the first element.
+For example, if the first element is greater than the second element, then it swaps.
+Once the first n loop is done, then it will start the second n-1 loop.
+It is O of n square. O(n2)
+
+Merge Sort :
+This algorithm is based on splitting a list, into two comparable sized lists.
+When the function is called, it divides N elements in half and recurs function.
+The method merges arranged elements by merging two pieces from the smallest piece in the last.
+left and right and then sorting each list and then merging the two sorted lists back together as one.
+It is O(n log n) that is always the same. But it needs to have extra storage space.
+
+Selection Sort.
+It sorts an array by repeatedly finding the minimum element from the unsorted part and putting it at the beginning.
+For example, Selecting the first element as the minimum value in the list and compares the next element and minimum value.
+If the minimum value is greater than the next value, the minimum value is changed while looping in the list.
+When the minimum value is founded in the list, then swapping the minimum value and the first element value.
+It is O of n square. O(n2)
+
+Quick sort
+Quicksort is the most optimized sort algorithm which performs sorting in O(n log n) comparisons.
+For example, after selecting a pivot value in the list, setting the start point from the first element.
+Startpoint ignores elements if the next element value is smaller than the pivot.
+Setting endpoint from the last element. Endpoint ignores elements if the next value is greater than the pivot.
+When start point and endpoint are intersecting, the left elements are smaller than pivot and right elements are bigger than pivot.
+Partitioning this two group of elements and recurring this function.
+If the pivot value is selected the smallest or biggest value every time, then complexity will be O of n square. (quadratic time)
